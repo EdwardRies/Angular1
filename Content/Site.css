@@ -1,0 +1,14 @@
+/* CSS Content */
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak, .ng-hide {
+    display: none !important;
+}
+
+body {
+    margin-top: 5px;
+} 
+
+div {
+  word-break: break-all;
+  word-wrap: break-word;
+}​
