@@ -1,3 +1,19 @@
+<a href="#/main" class="btn btn-primary">Back to Search</a>
+
+<br />
+
+<div class="row">
+    <div class="col-md-12 clearfix">
+        <img ng-src="{{ user.avatar_url }}" title="{{ user.name }}" style="width: 200px; float: left; padding-right: 10px;">
+        <span>
+            <br />
+            <br />
+            {{ user.name }}<br />
+            {{ user.location}}<br />
+        </span>
+    </div>
+</div>
+
 <div class="row">
     <div class="col-md-12">
         <select ng-model="repoSortOrder">
@@ -37,3 +53,7 @@
         </table>
     </div>
 </div>
+
+<br />
+
+<a href="#/main" class="btn btn-primary">Back to Search</a>

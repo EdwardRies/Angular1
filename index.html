@@ -1,56 +1,33 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="myModule">
+<html lang="en" ng-app="GitHubViewer">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha256-rByPlHULObEjJ6XQxW/flG2r+22R5dKiAoef+aXWfik=" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
     <link rel="stylesheet" href="Content/Site.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.min.js" integrity="sha256-+0edSx9qZO1m2O7eTtlMA8jEQcUZQVQQtG4YN3FHzJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js" integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8" crossorigin="anonymous"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular-route.min.js" integrity="sha256-4Gqdag/Zlcddp8v1IeY8ALeFaBRm4oxFvoci9aNXnow=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha256-KM512VNnjElC30ehFwehXjx1YCHPiQkOPmqnrWtpccM=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+    <script src="Scripts/App.js"></script>
+    <script src="Scripts/MainController.js"></script>
+    <script src="Scripts/UserController.js"></script>
+    <script src="Scripts/GitHubService.js"></script>
 </head>
 
-<body ng-controller="myController">
-
+<body>
+    <h1>Git Hub Viewer</h1>
     <div class="container-fluid">
-
-        <div class="row">
-            <div class="col-md-12">
-                <h1 ng-cloak>{{ pageTitle }}</h1>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-12">
-                <form name="searchUser" ng-submit="search(username)">
-                    <input type="search" placeholder="Username" ng-model="username" autofocus />
-                    <input type="submit" value="Search">
-                </form>
-                <div ng-show="intervalID">Seconds Before Auto Search Enabled: {{ countDown }}</div>
-            </div>
-        </div>
-
-        <div ng-include="'results.html'" ng-show="user"> </div>
-
-        <br />
-
-        <div class="row" ng-show="user">
-            <div class="col-md-12">
-                <span>
-                    {{ user }}
-                </span>
-            </div>
-        </div>
-
+        <div ng-view></div>
     </div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>        
-    <script src="Scripts/MyScripts.js"></script>
-    <script src="Scripts/GitHub.js"></script>
 </body>
 
 </html>

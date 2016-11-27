@@ -1,7 +1,7 @@
 // Custom Angular Service
 (function() {
     
-    var gitHub = function($http, $log) {
+    var GitHubService = function($http, $log) {
         var gitHubUsersUrl = "http://api.github.com/users/";
 
         var getUser = function(username) {
@@ -26,6 +26,6 @@
         };
     };
 
-    var module = angular.module("myModule");
-    module.factory("gitHub" ,["$http", "$log", gitHub]);
-}())
+    var module = angular.module("GitHubViewer");
+    module.factory("GitHubService" ,["$http", "$log", GitHubService]);
+}());
